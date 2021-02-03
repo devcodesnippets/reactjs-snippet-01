@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const listCountries = [
+		{ id: 0, country: 'Brazil' },
+		{ id: 1, country: 'England' },
+		{ id: 2, country: 'Australia' },
+		{ id: 3, country: 'Canada' },
+		{ id: 4, country: 'France' },
+		{ id: 5, country: 'Japan' },
+	]
+
+	return (
+		<>
+			<h3>React Js - Array map()</h3>
+
+			<ul>
+				{listCountries.map((country, i) => (
+					<li key={i}>{country.country}</li>
+				))}
+			</ul>
+		</>
+	);
 }
 
 export default App;
